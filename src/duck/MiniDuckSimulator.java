@@ -1,5 +1,7 @@
 package duck;
 
+import duck.fly.FlyRocketPowered;
+
 public class MiniDuckSimulator {
 
 	/**
@@ -10,6 +12,12 @@ public class MiniDuckSimulator {
 		Duck mallard = new MallardDuck();
 		mallard.performFly();
 		mallard.performQuack();
+		
+		Duck model = new ModelDuck();
+		model.performFly();
+		model.performQuack();
+		model.setFlyBehavior(new FlyRocketPowered());
+		model.performFly();
 	}
 
 }
